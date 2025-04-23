@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海历史博物馆 - 上海解放战役历史地点</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./images/8-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            position: relative;
+            border: 1px solid #d9534f;
+        }
+
+        h1 {
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .red-star {
+            color: #d9534f;
+            font-size: 1.2em;
+            margin: 0 5px;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .ribbon-content {
+            background: #d9534f;
+            color: white;
+            text-align: center;
+            transform: rotate(45deg);
+            position: relative;
+            padding: 5px 0;
+            top: 30px;
+            width: 160px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .museum-section {
+            background-color: rgba(249, 249, 249, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .museum-section h3 {
+            color: #d9534f;
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px dashed #d9534f;
+            padding-bottom: 10px;
+        }
+
+        .museum-info {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .museum-info p {
+            text-indent: 2em;
+        }
+
+        .museum-highlight {
+            font-weight: bold;
+            color: #d9534f;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .exhibit-list {
+            margin-top: 15px;
+        }
+
+        .exhibit-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .exhibit-item:before {
+            content: "•";
+            color: #d9534f;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto 0;
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-btn:hover {
+            background-color: #286090;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .ending-message {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .memorial {
+            text-align: center;
+            margin-top: 15px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="ribbon">
+                <div class="ribbon-content">1949.5</div>
+            </div>
+            <h1><span class="red-star">★</span>上海历史博物馆<span class="red-star">★</span></h1>
+
+            <div class="museum-section">
+                <h3>参观信息</h3>
+                <div class="museum-info">
+                    <p>最后一站，我们来到了上海历史博物馆，博物馆四楼详细记录了上海的解放历程。</p>
+                    <p>在这里，您可以通过丰富的历史资料、珍贵的文物和生动的展示，全面了解上海解放战役的全过程。</p>
+                    <div class="museum-highlight">博物馆四楼的上海解放战役展区包含以下展品：</div>
+                    <div class="exhibit-list">
+                        <div class="exhibit-item">历史照片：记录了解放军进驻上海的历史性时刻</div>
+                        <div class="exhibit-item">实物展品：当时使用的武器装备、军用物资等</div>
+                        <div class="exhibit-item">历史文献：包括战役命令、会议记录等重要文件</div>
+                        <div class="exhibit-item">多媒体展示：通过声光电等现代技术再现战役场景</div>
+                        <div class="exhibit-item">烈士纪念区：缅怀在上海解放战役中牺牲的英雄们</div>
+                    </div>
+                    <div class="memorial">不忘历史，继往开来</div>
+                </div>
+            </div>
+
+            <div class="ending-message">
+                <p>通过参观这些历史地点，我们追溯了上海解放战役的光辉历程，铭记先烈们的丰功伟绩。</p>
+                <p>历史的车轮滚滚向前，但我们永远不会忘记那段峥嵘岁月和为了新中国成立而献出生命的英雄们。</p>
+            </div>
+
+            <button class="back-btn" onclick="window.location.href='index.html'">返回地图</button>
+        </div>
+    </div>
+</body>
+
+</html>

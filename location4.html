@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山西路桥 - 上海解放战役历史地点</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./images/4-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            position: relative;
+            border: 1px solid #d9534f;
+        }
+
+        h1 {
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .red-star {
+            color: #d9534f;
+            font-size: 1.2em;
+            margin: 0 5px;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .ribbon-content {
+            background: #d9534f;
+            color: white;
+            text-align: center;
+            transform: rotate(45deg);
+            position: relative;
+            padding: 5px 0;
+            top: 30px;
+            width: 160px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .question-section {
+            background-color: rgba(249, 249, 249, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .question {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .answer-section {
+            display: none;
+            background-color: rgba(240, 248, 255, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #337ab7;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .answer {
+            font-weight: bold;
+            color: #337ab7;
+        }
+
+        .background-section {
+            background-color: rgba(255, 249, 230, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .background-section h3 {
+            color: #d9534f;
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px dashed #d9534f;
+            padding-bottom: 10px;
+        }
+
+        .background-section p {
+            line-height: 1.6;
+            text-indent: 2em;
+        }
+
+        .show-answer-btn {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .show-answer-btn:hover {
+            background-color: #c9302c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto 0;
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-btn:hover {
+            background-color: #286090;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-note {
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .memorial {
+            text-align: center;
+            margin-top: 15px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="ribbon">
+                <div class="ribbon-content">1949.5</div>
+            </div>
+            <h1><span class="red-star">★</span>山西路桥<span class="red-star">★</span></h1>
+
+            <div class="question-section">
+                <div class="question">问：上海战役我方牺牲烈士总数？歼敌总数？</div>
+                <button class="show-answer-btn" onclick="showAnswer()">查看答案</button>
+            </div>
+
+            <div class="answer-section" id="answerSection">
+                <div class="answer">答：近8000人。歼敌15.3万人。</div>
+            </div>
+
+            <div class="background-section">
+                <h3>历史背景</h3>
+                <p>这里是山西路桥，曾发生过激烈的战斗。国民党军在河岸严阵布防，铁丝一层连一层，岸边的沙袋密密麻麻。</p>
+                <p>解放军战士们在这里面对强大的国民党守军防御，付出了巨大的牺牲才最终成功突破。</p>
+                <div class="memorial">沿着革命先辈足迹，传承红色基因</div>
+            </div>
+
+            <button class="back-btn" onclick="window.location.href='index.html'">返回地图</button>
+
+            <div class="historical-note">
+                在上海解放战役中，我军共牺牲近8000名烈士，用鲜血和生命换来了上海的解放。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAnswer() {
+            document.getElementById('answerSection').style.display = 'block';
+            document.querySelector('.show-answer-btn').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

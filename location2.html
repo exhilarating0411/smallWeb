@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外白渡桥 - 上海解放战役历史地点</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./images/2-bg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            position: relative;
+            border: 1px solid #d9534f;
+        }
+
+        h1 {
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .red-star {
+            color: #d9534f;
+            font-size: 1.2em;
+            margin: 0 5px;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .ribbon-content {
+            background: #d9534f;
+            color: white;
+            text-align: center;
+            transform: rotate(45deg);
+            position: relative;
+            padding: 5px 0;
+            top: 30px;
+            width: 160px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .question-section {
+            background-color: rgba(249, 249, 249, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .question {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .answer-section {
+            display: none;
+            background-color: rgba(240, 248, 255, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #337ab7;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .answer {
+            font-weight: bold;
+            color: #337ab7;
+        }
+
+        .background-section {
+            background-color: rgba(255, 249, 230, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .background-section h3 {
+            color: #d9534f;
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px dashed #d9534f;
+            padding-bottom: 10px;
+        }
+
+        .background-section p {
+            line-height: 1.6;
+            text-indent: 2em;
+        }
+
+        .show-answer-btn {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .show-answer-btn:hover {
+            background-color: #c9302c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto 0;
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-btn:hover {
+            background-color: #286090;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-note {
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .memorial {
+            text-align: center;
+            margin-top: 15px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="ribbon">
+                <div class="ribbon-content">1949.5.25</div>
+            </div>
+            <h1><span class="red-star">★</span>外白渡桥<span class="red-star">★</span></h1>
+
+            <div class="question-section">
+                <div class="question">问：上海战役经过哪两个阶段? 上海战役有哪三个主要战场？</div>
+                <button class="show-answer-btn" onclick="showAnswer()">查看答案</button>
+            </div>
+
+            <div class="answer-section" id="answerSection">
+                <div class="answer">答：钳击吴淞；总攻市区。宝山、高桥、市区三个主要战场。</div>
+            </div>
+
+            <div class="background-section">
+                <h3>历史背景</h3>
+                <p>"摇啊摇，摇到外婆桥……"一代又一代上海人唱着同样的歌谣从外白渡桥上走过。</p>
+                <p>1949年5月25日，上海解放战役进行到关键时刻。解放军第27军79师从外滩向外白渡桥发起冲锋，却被国民党军队设置的地堡、拒马和铁丝网所阻拦。</p>
+                <p>在桥的北岸，有一幢黄褐色的艺术派建筑居高临下，它就是上海大厦，原名百老汇大厦。国民党守军居高临下，向着桥面倾泻子弹，给解放军战士们造成了大量伤亡。</p>
+                <p>这里考考大家，解放军战士可否可以用重炮轰击呢？</p>
+                <p>答案是否定的！</p>
+                <p>——"上海将来要在新中国工业化建设中发挥很大的作用，我们一定要保全它！"</p>
+                <p>解放军坚持用轻武器突击冲锋，付出惨重伤亡的代价，挫败了敌人毁桥的意图，保住了这座上海人的"外婆桥"。</p>
+                <div class="memorial">历史铭记，英雄不朽</div>
+            </div>
+
+            <button class="back-btn" onclick="window.location.href='index.html'">返回地图</button>
+
+            <div class="historical-note">
+                "外白渡桥"见证了解放上海的艰辛历程，解放军战士为保护城市基础设施付出了巨大牺牲。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAnswer() {
+            document.getElementById('answerSection').style.display = 'block';
+            document.querySelector('.show-answer-btn').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

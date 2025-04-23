@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海解放战役历史地图</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #cacaca;
+            font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map {
+            position: relative;
+            width: 80%;
+            height: 100vh;
+
+            background-image: url(./map.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .location {
+            position: absolute;
+            width: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .location:hover {
+            transform: scale(1.2);
+        }
+
+        /* 烂泥渡战役 */
+        .location1 {
+            top: 55%;
+            right: 28%;
+        }
+
+        .location1 img {
+            width: 100px !important;
+        }
+
+        /* 外白渡桥 */
+        .location2 {
+            top: 18%;
+            right: 30%;
+        }
+
+        .location2 img {
+            width: 80px !important;
+        }
+
+
+
+        /* 四川路桥 */
+        .location3 {
+            top: 18%;
+            right: 48%;
+        }
+
+        .location3 img {
+            width: 60px !important;
+        }
+
+        /* 山西路桥 */
+        .location4 {
+            top: 18%;
+            left: 38%;
+        }
+
+        .location4 img {
+            width: 80px !important;
+        }
+
+        /* 浙江路桥 */
+        .location5 {
+            top: 22%;
+            left: 30%;
+        }
+
+        .location5 img {
+            width: 60px !important;
+        }
+
+        /* 永安公司 */
+        .location6 {
+            bottom: 12%;
+            left: 45%;
+        }
+
+        .location6 img {
+            width: 80px !important;
+        }
+
+        /* 好八连雕塑 */
+        .location7 {
+            bottom: 15%;
+            left: 26%;
+        }
+
+        .location7 img {
+            width: 80px !important;
+        }
+
+        /* 历史博物馆 */
+        .location8 {
+            left: 22%;
+            bottom: 5%;
+        }
+
+        .location8 img {
+            width: 60px !important;
+        }
+
+
+
+        .location-name {
+            position: absolute;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            transform: translateY(-30px);
+        }
+
+        .location:hover .location-name {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+
+
+        <!-- 烂泥渡战役 -->
+        <a href="location1.html" class="location location1">
+            <img src="./xiaoren-removebg-preview.png" alt="烂泥渡战役" width="50">
+            <span class="location-name">烂泥渡战役</span>
+        </a>
+
+
+        <!-- 外白渡桥 -->
+        <a href="location2.html" class="location location2">
+            <img src="./xiaoren-removebg-preview.png" alt="外白渡桥" width="50">
+            <span class="location-name">外白渡桥</span>
+        </a>
+
+
+        <!-- 四川路桥 -->
+        <a href="location3.html" class="location location3">
+            <img src="./xiaoren-removebg-preview.png" alt="四川路桥" width="50">
+            <span class="location-name">四川路桥</span>
+        </a>
+
+        
+
+        <!-- 山西路桥 -->
+        <a href="location4.html" class="location location4">
+            <img src="./xiaoren-removebg-preview.png" alt="山西路桥" width="50">
+            <span class="location-name">山西路桥</span>
+        </a>
+
+        
+
+        <!-- 浙江路桥 -->
+        <a href="location5.html" class="location location5">
+            <img src="./xiaoren-removebg-preview.png" alt="浙江路桥" width="50">
+            <span class="location-name">浙江路桥</span>
+        </a>
+
+        
+        <!-- 永安公司 -->
+        <a href="location6.html" class="location location6">
+            <img src="./xiaoren-removebg-preview.png" alt="永安公司" width="50">
+            <span class="location-name">永安公司</span>
+        </a>
+
+        
+        <!-- 好八连雕塑 -->
+        <a href="location7.html" class="location location7">
+            <img src="./xiaoren-removebg-preview.png" alt="好八连雕塑" width="50">
+            <span class="location-name">好八连雕塑</span>
+        </a>
+
+        
+
+
+        <!-- 历史博物馆 -->
+        <a href="location8.html" class="location location8">
+            <img src="./xiaoren-removebg-preview.png" alt="上海历史博物馆" width="50">
+            <span class="location-name">上海历史博物馆</span>
+        </a>
+    </div>
+
+</body>
+
+</html>

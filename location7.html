@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好八连雕塑 - 上海解放战役历史地点</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./images/7-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            position: relative;
+            border: 1px solid #d9534f;
+        }
+
+        h1 {
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .red-star {
+            color: #d9534f;
+            font-size: 1.2em;
+            margin: 0 5px;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .ribbon-content {
+            background: #d9534f;
+            color: white;
+            text-align: center;
+            transform: rotate(45deg);
+            position: relative;
+            padding: 5px 0;
+            top: 30px;
+            width: 160px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .question-section {
+            background-color: rgba(249, 249, 249, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .question {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .answer-section {
+            display: none;
+            background-color: rgba(240, 248, 255, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #337ab7;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .answer {
+            font-weight: bold;
+            color: #337ab7;
+        }
+
+        .background-section {
+            background-color: rgba(255, 249, 230, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .background-section h3 {
+            color: #d9534f;
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px dashed #d9534f;
+            padding-bottom: 10px;
+        }
+
+        .background-section p {
+            line-height: 1.6;
+            text-indent: 2em;
+        }
+
+        .show-answer-btn {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .show-answer-btn:hover {
+            background-color: #c9302c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto 0;
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-btn:hover {
+            background-color: #286090;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-note {
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .memorial {
+            text-align: center;
+            margin-top: 15px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d9534f;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-container h3 {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-size: 1.4em;
+        }
+
+        .video-container p {
+            color: #eee;
+            margin-bottom: 15px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 90%;
+            max-width: 640px;
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .video-wrapper:before {
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+            /* 16:9比例 */
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .video-wrapper video:hover {
+            filter: brightness(1.1);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(217, 83, 79, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: rgba(217, 83, 79, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .play-button:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="ribbon">
+                <div class="ribbon-content">1949.5</div>
+            </div>
+            <h1><span class="red-star">★</span>好八连雕塑<span class="red-star">★</span></h1>
+
+            <div class="video-container">
+                <h3>学生朗诵雕塑</h3>
+                <p>观看视频了解更多关于好八连的英雄事迹</p>
+                <div class="video-wrapper">
+                    <video id="heroVideo" src="./video/22bd85b8753fadff43fb69584900935a.mp4" controls
+                        poster="./images/video-poster.jpg"></video>
+                    <div class="play-button" id="playBtn"></div>
+                </div>
+            </div>
+
+            <div class="background-section">
+                <h3>历史背景</h3>
+                <p>好八连是解放军在上海战役中表现突出的英雄连队，他们在战斗中英勇奋战，为上海的解放作出了重要贡献。这座雕塑是为了纪念他们的英雄事迹而建立的。</p>
+                <p>在上海解放战役中，好八连发扬了我军的光荣传统，不怕牺牲、英勇作战，他们的英雄事迹激励了一代又一代人。</p>
+                <div class="memorial">英雄事迹永垂不朽</div>
+            </div>
+
+            <button class="back-btn" onclick="window.location.href='index.html'">返回地图</button>
+
+            <div class="historical-note">
+                "好八连"在上海战役中的英勇表现是我军优良传统和战斗精神的生动体现。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 视频播放控制
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('heroVideo');
+            const playBtn = document.getElementById('playBtn');
+
+            if (video && playBtn) {
+                playBtn.addEventListener('click', function () {
+                    if (video.paused || video.ended) {
+                        video.play();
+                        playBtn.style.display = 'none';
+                    } else {
+                        video.pause();
+                        playBtn.style.display = 'flex';
+                    }
+                });
+
+                video.addEventListener('play', function () {
+                    playBtn.style.display = 'none';
+                });
+
+                video.addEventListener('pause', function () {
+                    playBtn.style.display = 'flex';
+                });
+
+                video.addEventListener('ended', function () {
+                    playBtn.style.display = 'flex';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
