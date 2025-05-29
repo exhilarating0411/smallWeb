@@ -11,23 +11,23 @@
             box-sizing: border-box;
             background-image: url(./images/0-bg.jpg);
             background-size: cover;
-            background-position: center;
+            background-position: -150px center; /* 背景左移 */
             background-repeat: no-repeat;
             background-color: #cacaca;
             font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
             min-height: 100vh;
         }
-
+    
         .map {
             position: relative;
-            width: 80%;
+            width: 70%; /* 减小地图宽度 */
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0 auto;
         }
-
+    
         .map-image {
             opacity: 0.8;
             max-width: 100%;
@@ -52,18 +52,18 @@
                 transparent 100%
             );
         }
-
+    
         .location {
             position: absolute;
             width: 50px;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-
+    
         .location:hover {
             transform: scale(1.2);
         }
-
+    
         .location1 { top: 55%; right: 28%; }
         .location1 img { width: 100px !important; }
         .location2 { top: 18%; right: 30%; }
@@ -80,7 +80,7 @@
         .location7 img { width: 80px !important; }
         .location8 { left: 22%; bottom: 5%; }
         .location8 img { width: 60px !important; }
-
+    
         .location-name {
             position: absolute;
             color: white;
@@ -94,57 +94,59 @@
             transition: opacity 0.3s;
             transform: translateY(-30px);
         }
-
+    
         .location:hover .location-name {
             visibility: visible;
             opacity: 1;
         }
-
+    
         .vertical-text-wrapper {
             border-radius: 20px;
             position: fixed;
             top: 50%;
-            right: 50px;
+            right: 0px; /* 调整右边距 */
             transform: translateY(-50%);
-            z-index: 9; /* 低于文字的 z-index */
-            padding: 10px;
-            width: 120px; /* 稍宽以容纳背景 */
-            height: auto;
+            z-index: 9;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-image: linear-gradient(
                 to top left,
-                rgb(226, 243, 248) 70%, /* 中心白色不透明 */
-                rgba(255, 255, 255, 0.7) 98%, /* 边缘半透明 */
-                transparent 50% /* 边缘完全透明 */
+                rgb(252, 253, 225) 70%,
+                rgba(255, 255, 255, 0.7) 98%,
+                transparent 50%
             );
             mask-image: linear-gradient(
                 to top left,
-                rgba(217, 236, 247, 0.9) 70%, /* 中心不透明 */
-                rgba(0, 0, 0, 0.5) 98%, /* 边缘半透明 */
+                rgba(254, 251, 231, 0.9) 70%,
+                rgba(0, 0, 0, 0.5) 98%,
                 transparent 100%
             );
             -webkit-mask-image: linear-gradient(
                 to top left,
-                rgba(232, 241, 247, 0.9) 70%, /* 中心不透明 */
-                rgba(0, 0, 0, 0.5) 98%, /* 边缘半透明 */
+                rgba(249, 248, 224, 0.9) 70%,
+                rgba(0, 0, 0, 0.5) 98%,
                 transparent 100%
             );
         }
-
+    
         .vertical-text-container {
             writing-mode: vertical-rl;
             text-orientation: mixed;
             font-size: 4rem;
             font-weight: bold;
             color: transparent;
-            background: linear-gradient(to bottom, #f2c028, #ff6666); /* 文字红色渐变 */
+            background: linear-gradient(to bottom, #f2c028, #ff6666);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            z-index: 10; /* 确保文字在背景上方 */
+            z-index: 10;
             padding: 10px;
             height: auto;
             white-space: nowrap;
             width: 100px;
-            text-align: center; /* 文字居中对齐 */
+            text-align: center;
         }
     </style>
 </head>
@@ -185,7 +187,7 @@
         </a>
     </div>
     <div class="vertical-text-wrapper">
-        <div class="vertical-text-container">行走的大思政课</div>
+        <div class="vertical-text-container">行 走 的 大 思 政 课</div>
     </div>
 </body>
 </html>
