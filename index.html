@@ -10,22 +10,35 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #cacaca;
+            background-image: url(./images/1-bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #cacaca; /* Fallback */
             font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            min-height: 100vh; /* Ensure full viewport height */
         }
 
         .map {
             position: relative;
             width: 80%;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-            background-image: url(./map.jpg);
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
+        .map-image {
+            opacity: 0.8;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
         }
 
         .location {
@@ -141,12 +154,27 @@
             visibility: visible;
             opacity: 1;
         }
+
+        .vertical-text-container {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 3rem;
+            color: #555555;
+            text-shadow: 1px 1px 2px white;
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            z-index: 10;
+            padding: 10px;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="map">
-
+        <img src="./map.jpg" alt="Map" class="map-image">
 
         <!-- 烂泥渡战役 -->
         <a href="location1.html" class="location location1">
@@ -207,6 +235,7 @@
             <span class="location-name">上海历史博物馆</span>
         </a>
     </div>
+    <div class="vertical-text-container">行走的大思政课</div>
 
 </body>
 
